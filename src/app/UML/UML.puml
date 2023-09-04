@@ -1,0 +1,31 @@
+@startuml
+class app.Cappuccino {
++ void makeCoffee()
+}
+class app.Espresso {
++ void makeCoffee()
+}
+class app.CoffeeMachine {
+- Coffee coffee
++ void setCoffee(Coffee)
++ void start()
+}
+class app.Latte {
++ void makeCoffee()
+}
+interface app.Coffee {
+~ void makeCoffee()
+}
+class app.Main {
++ {static} void main(String[])
+}
+class app.Validation {
+- Scanner scanner
++ int validate()
+}
+
+
+app.Coffee <|.. app.Cappuccino
+app.Coffee <|.. app.Espresso
+app.Coffee <|.. app.Latte
+@enduml
